@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Suggestion Page</title>
+</head>
+<body>
+    <h1 class="weatherheading">
+        Seems like the weather here in <br>
+        <input type="box" name="text" placeholder="Enter City" id="cityinput"> 
+        <input type="submit" value="Submit" id="add">
+    </h1>
+    <section class="display">
+        <div class="wrapper">
+            <h2 id="cityoutput"></h2>
+            <p id="description"></p>
+            <p id="temp"></p>
+            <p id="wind"></p>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        
+    var inputval = document.querySelector('#cityinput')
+var btn = document.querySelector('#add');
+var city = document.querySelector('#cityoutput')
+var descrip = document.querySelector('#description')
+var temp = document.querySelector('#temp')
+var wind = document.querySelector('#wind')
+
+apik = "e28f3641644ea7133de0b96a3df2547e"
+
+//kelvin to celcious. 1 Kelvin is equal to -272.15 Celsius.
+
+function convertion(val){
+    return (val - 273).toFixed(2) 
+}
+// Colecting all the info with fetch method.
+
+btn.addEventListener('click', function(){
+    
+    //api link where the data will be fetched from.
+
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputval.value+'&appid='+apik)
+        .then(res => res.json())
+
+        .then(data => {
+
+//Now i'm collecting the necessary information with the API link. 
+//I will collect that information and store it in different constants.
+
+var nameval = data['name']
+var descrip = data['weather']['0']['description']
+var tempature = data['main']['temp']
+var wndspd = data['wind']['speed']
+
+//With innerHTML I'll make arrangements to display all the information in the webpage.
+
+city.innerHTML=`Weather of <span>${nameval}<span>`
+            temp.innerHTML = `Temperature: <span>${ convertion(tempature)} C</span>`
+            description.innerHTML = `Sky Conditions: <span>${descrip}<span>`
+            wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`
+
+        })
+
+        //Now the condition has be added that what if you do not input anything in the input box.
+
+        .catch(err => alert('You entered Wrong city name'))
+    });
+
+    
+    </script>
+</body>
+</html>

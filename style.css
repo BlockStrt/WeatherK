@@ -1,0 +1,93 @@
+
+.parent{
+    display: grid;
+    justify-content: center;
+    width: 50%;
+    height: 50rem;
+    place-items: center;
+    background-color: rgb(179, 177, 177);
+    margin-left: 25%;
+    margin-top: 5%;
+    border-radius: 40%;
+}
+.box {
+    font-size: 130%;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 20%;
+}
+label{
+    display: inline-block;
+    font-size: 5ch;
+    padding-bottom: 70%;
+}
+input{
+    transform: scale(2);
+    margin: 30px; 
+}
+
+.boxer{
+    font-size: 130%;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type=submit] {
+    
+
+}
+input[type=box] {
+ margin-bottom: auto;
+ 
+}
+
+/* Weather page styling*/
+
+body{
+  background: url(IMG/virgil.jpg);
+}
+.display{
+  border: 15px solid rgb(0, 0, 0);
+  padding: 200px;
+  margin: 200px;
+  background:url(IMG/water.jpg);
+  background-repeat: repeat;
+}
+
+.weatherheading{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 8ch;
+}
+
+.wrapper {
+    margin: 0 9rem;
+    background-color: white;
+    height: 45vh;
+    margin: 50px auto;
+    border-radius: 2px;
+}
+
+.wrapper h2{
+    padding: 5px 0;
+    text-align: center;
+    background: #0548b5;
+    color: white;
+    font-family: sans-serif;
+  }
+  .wrapper p{
+    margin:20px 50px;
+    margin-right: 20px;
+    text-align: left;
+    color: #04214c;
+    font-size:23px;
+  }
+
+  .wrapper h2 span{
+    font-size: 26px;
+    color: #9beefb;
+  }
+    .wrapper p span{
+    color: #90006e;
+    font-size: 25px;
+  }
