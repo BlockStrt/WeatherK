@@ -17,8 +17,6 @@ The main thing I spent time on was fetching the data through the open weathers A
 
 ## Repository overview
 
-Provide an overview of the directory structure and files, for example:
-
 ├── README.md
 ├── Weather report w/ Virgil
 ├── Motivation
