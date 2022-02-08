@@ -9,10 +9,10 @@ This project actually was one suggested from my mentor. So I did some research r
 
 
 ## Built With
-Semantic HTML5 markup
-CSS custom properties
-CSS Grid
-JavaScript
+-Semantic HTML5 markup
+-CSS custom properties
+-CSS Grid
+-JavaScript
 
 ## Method and results
 
