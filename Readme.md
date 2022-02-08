@@ -8,6 +8,12 @@ This project asks you a couple of questions. Is it hot or cold right now? What s
 This project actually was one suggested from my mentor. So I did some research reading some documentaion to get this done.
 
 
+## Built With
+Semantic HTML5 markup
+CSS custom properties
+CSS Grid
+JavaScript
+
 ## Method and results
 
 First, I simply created the layout before I designed it. Made sure all of my functions were clear throughout the two pages. I wanted to give it a slightly interactive feel.
